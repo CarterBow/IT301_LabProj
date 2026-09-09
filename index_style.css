@@ -1,26 +1,26 @@
 html{
-    background-color: lightblue; 
+   background-color: lightblue;
 }
 p{
-    color: darkgreen;
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-    font-variation-settings:
-      "wdth" 100;
-    font-size: 17px
+   color: darkgreen;
+   font-family: "Roboto", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 700;
+   font-style: normal;
+   font-variation-settings:
+     "wdth" 100;
+   font-size: 17px
 }
 
-}
+
 h1{
-    background-color: lightgray;
-    text-align: center;
+   background-color: lightgray;
+   text-align: center;
 }
 h2{
-    border: 1px solid black;
-    box-shadow: 5px 5px 5px gray;
-    border-radius:5px;
-    padding: 2px;
-    font-weight: 1000;
+   border: 1px solid black;
+   box-shadow: 5px 5px 5px gray;
+   border-radius:5px;
+   padding: 2px;
+   font-weight: 1000;
 }
