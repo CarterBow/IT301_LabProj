@@ -16,7 +16,13 @@ p{
    border-radius: 5px;
    box-shadow: 5px 5px 5px black;
 }
-
+a{
+   padding: 5px;
+   color: rgb(232, 135, 99);
+   background-color: rgb(48, 48, 48);
+   border: 2px solid black;
+   border-radius: 5px;
+}
 
 h1{
    background-color: rgb(48, 48, 48);
