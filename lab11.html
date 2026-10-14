@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 11</title>
+    <style>
+        button{
+            background-color: Blue;
+            padding: 10px;
+            font-size: 20px;
+        }
+        div{
+            width: 100vw;
+        }
+    </style>
+</head>
+<body>
+    <button id="button1">Click Me! 😊</button>
+    <div id="mouse"></div>
+        <script>
+        const button = document.getElementById("button1");
+
+        function mouseOver(event){
+            event.target.textContent = "Do not click! 😠"
+            event.target.style.backgroundColor = "yellow";
+        }
+        button.addEventListener("mouseover", mouseOver);
+
+        function mouseClick(event){
+            event.target.textContent = "Ouch! 🤕"
+            event.target.style.backgroundColor = "red";
+        }
+        button.addEventListener("click", mouseClick);
+
+        function mouseOut(event){
+            event.target.textContent = "Phew! 😌"
+            event.target.style.backgroundColor = "lightgreen";
+        }
+        button.addEventListener("mouseout", mouseOut);
+
+        function doubleClick(event){
+            event.target.textContent = "Double trouble! 🤩";
+            event.target.style.backgroundColor = "pink";
+        }
+        button.addEventListener("dblclick", doubleClick);
+
+
+        const mouse = document.getElementById("mouse");
+
+        function mouseMove(event){
+            button.textContent = "I see you! 👀";
+            button.style.backgroundColor = "lightblue";
+        }
+        mouse.addEventListener("mousemove", mouseMove);
+    </script>
+</body>
+</html>
