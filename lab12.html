@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Lab 12</title>
+</head>
+<body>
+   <form action="#">
+       <label for="name">What is your name:</label>
+       <input type="string" id="name">
+       <button id="submit">Submit</button>
+   </form>
+   <p id="hi"></p>
+
+   <form action="#" id="first_num">
+       <label for="name">First Number:</label>
+       <input type="string" id="num1">
+   </form>
+
+
+   <form action="#" id="second_num">
+       <label for="name">Second number:</label>
+       <input type="string" id="num2">
+   </form>
+
+
+   <form action="#" id="operator">
+       <label for="name">Operation</label><br>
+       <input type="radio" name="method" value="add">Addition
+       <input type="radio" name="method" value="sub">Subtraction
+       <input type="radio" name="method" value="mult">Multiplicaiton
+       <input type="radio" name="method" value="div">Division<br>
+       <button id="calc">Calculate</button>
+       <button id="clear">Clear</button>
+   </form>
+   <p id="answer"></p>
+   <script>
+        document.getElementById('submit').addEventListener('click', function(){
+            document.getElementById('hi').textContent = `Hello ${document.getElementById('name').value}`;
+       });
+       document.getElementById('calc').addEventListener('click', function(){
+           const num1 = document.getElementById('num1');
+           const num2 = document.getElementById('num2');
+           const operator = document.querySelector('[name=method]:checked');
+           if (operator.value == 'add') {
+               document.getElementById('answer').textContent = Number(num1.value) + Number(num2.value);
+           }
+           else if (operator.value == 'sub') {
+               document.getElementById('answer').textContent = Number(num1.value) - Number(num2.value);
+           }
+           else if (operator.value == 'mult') {
+               document.getElementById('answer').textContent = Number(num1.value) * Number(num2.value);
+           }
+           else if (operator.value == 'div') {
+               document.getElementById('answer').textContent = Number(num1.value) / Number(num2.value);
+           }
+       })
+       document.getElementById('clear').addEventListener('click', function(){
+            document.getElementById('num1').value = '';
+            document.getElementById('num2').value = '';
+            document.getElementById('answer').textContent = '';
+            document.getElementById('name').value = '';
+            document.getElementById('hi').textContent = '';
+            document.querySelector('[value=add]').checked = false;
+            document.querySelector('[value=sub]').checked = false;
+            document.querySelector('[value=mult]').checked = false;
+            document.querySelector('[value=div]').checked = false;
+       })
+   </script>
