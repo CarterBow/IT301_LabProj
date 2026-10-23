@@ -1,0 +1,155 @@
+nav {
+    border-bottom: none;
+}
+
+nav ul {
+    padding-top: 15px;
+}
+
+header {
+    border-bottom: 4px solid #6E4A8E;
+}
+
+.home-photo {
+    max-width: 900px;
+    margin: 0 auto 25px;
+}
+
+.home-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.home-welcome {
+    background-color: #21172B;
+    border-bottom: 3px solid #D6B45C;
+    padding: 30px;
+}
+
+.home-welcome h2 {
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+.home-welcome p {
+    margin-bottom: 0;
+}
+
+.home-start {
+    padding: 20px 10px;
+}
+
+.home-start h2 {
+    margin-top: 0;
+}
+
+.home-links {
+    padding: 15px 10px 35px;
+    border-bottom: 1px solid #6E4A8E;
+}
+
+.home-links h2 {
+    margin-top: 0;
+}
+
+.home-page-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.home-page-links a {
+    display: block;
+    background-color: #21172B;
+    color: #D6B45C;
+    text-decoration: none;
+    border: 1px solid #6E4A8E;
+    border-radius: 5px;
+    padding: 12px 20px;
+}
+
+.home-page-links a:hover,
+.home-page-links a:focus {
+    background-color: #D6B45C;
+    color: #121218;
+}
+
+.home-feedback {
+    background-color: #2D2238;
+    border-top: 3px solid #D6B45C;
+    padding: 30px;
+}
+
+.home-feedback h2 {
+    margin-top: 0;
+}
+
+.feedback-form {
+    max-width: 650px;
+}
+
+.feedback-form label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #121218;
+    color: #F4F1F6;
+    border: 2px solid #6E4A8E;
+    border-radius: 5px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+    outline: 2px solid #D6B45C;
+}
+
+.feedback-form button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #D6B45C;
+    color: #121218;
+    border: none;
+    border-radius: 5px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.feedback-form button:hover,
+.feedback-form button:focus {
+    background-color: #B99AD6;
+}
+
+/* Media Query */
+@media (max-width: 700px) {
+    .home-welcome {
+        padding: 20px;
+    }
+
+    .home-welcome h2 {
+        font-size: 1.5rem;
+    }
+
+    .home-feedback {
+        padding: 20px;
+    }
+
+    .home-page-links {
+        flex-direction: column;
+    }
+
+    .home-page-links a {
+        text-align: center;
+    }
+}

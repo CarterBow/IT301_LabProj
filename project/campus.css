@@ -1,0 +1,75 @@
+
+.campus-intro {
+    border-bottom: 3px solid #D6B45C;
+}
+
+.campus-layout {
+    display: flex;
+    gap: 25px;
+}
+
+.campus-sidebar {
+    background-color: #21172B;
+    border-top: 4px solid #D6B45C;
+    border-bottom: 4px solid #D6B45C;
+    border-left: 2px dotted #D6B45C;
+    border-right: 2px dotted #D6B45C;
+    padding: 15px;
+    flex: 0 0 190px;
+    position: sticky;
+    top: 20px;
+    align-self: flex-start;
+}
+
+.campus-sidebar h2 {
+    font-size: 1.1rem;
+    margin-top: 0 0 12px 0;
+}
+
+.campus-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.campus-sidebar li {
+    margin-bottom: 10px;
+}
+
+.campus-sidebar a {
+    color: #F4F1F6;
+    text-decoration: none;
+}
+
+.campus-sidebar a:hover,
+.campus-sidebar a:focus {
+    color: #D6B45C;
+    text-decoration: underline;
+
+}
+
+.campus-details {
+    flex: 1;
+    min-width: 20;
+}
+
+.campus-details section {
+    background-color: #2D2238;
+    border-left: 3px solid #6E4A8E;
+}
+
+.campus-details h2 {
+    margin-top: 0;
+}
+
+Media Query
+@media (max-width: 700px) {
+    .campus-layout {
+        flex-direction: column;
+    }
+
+    .campus-sidebar {
+        position: static;
+        flex: auto;
+    }
+}

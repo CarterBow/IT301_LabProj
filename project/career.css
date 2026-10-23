@@ -1,0 +1,71 @@
+.career-intro {
+    padding: 35px 0;
+    border-bottom: 2px solid #6E4A8E;
+}
+
+.career-label {
+    color: #D6B45C;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.career-intro h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 15px;
+    border-bottom: 6px double #D6B45C;
+    padding-bottom: 6px;
+}
+
+.career-intro p {
+    max-width: 750px;
+}
+
+.career-row {
+    display: flex;
+    gap: 40px;
+    padding: 30px 0;
+    border-bottom: 1px solid #6E4A8E;
+}
+
+.career-row h2 {
+    flex: 1;
+    color: #D6B45C;
+    font-size: 1.3rem;
+    margin-top: 0;
+}
+
+.career-content {
+    flex: 2;
+}
+
+.career-content h3 {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.career-content p {
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.career-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Media Query */
+@media (max-width: 700px) {
+    .career-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .career-row h2 {
+        flex: none;
+    }
+
+    .career-intro h2 {
+        font-size: 1.5rem;
+    }
+}
