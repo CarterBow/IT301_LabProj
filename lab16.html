@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Lab 16</title>
+   <style>
+       .rules{
+           display: none;
+       }
+       .rules.show{
+           display: block;
+       }
+   </style>
+</head>
+<body>
+   <form action="#" id="form">
+       <label for="enter">Name:</label>
+       <input type="text" id="name" placeholder="Enter Name" required>
+       <label for="enter">Email:</label>
+       <input type="email" id="email" placeholder="Enter Email" required>
+       <label for="enter">Password:</label>
+       <input type="password" id="pword" placeholder="Enter Password" required>
+       <div  class="rules" id="password-rules">
+           <div id="rule-length" class="rule">✖ At least 6 characters</div>
+           <div id="rule-special" class="rule">✖ Must include a special character (!@#$...)</div>
+           <div id="rule-uppercase" class="rule">✖ Must include an uppercase letter (A-Z)</div>
+       </div>
+       <button id="submit" type="submit">Submit</button>
+   </form>
+   <p id="result"></p>
+   <script>
+       const submit = document.getElementById('submit');
+       const result = document.getElementById('result');
+       const pword = document.getElementById('pword');
+
+
+       
+        pword.addEventListener('input', function() {
+            const password = pword.value;
+            const rules = document.getElementById('password-rules');
+            const length = document.getElementById('rule-length');
+            const special = document.getElementById('rule-special');
+            const upper = document.getElementById('rule-uppercase');
+            rules.classList.add('show');
+            const hasLength = password.length >= 6;
+            const hasSpecial = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+            const hasUpper = /[A-Z]/.test(password);
+
+            length.classList.toggle('valid', hasLength);
+            length.classList.toggle('invalid', !hasLength);
+            special.classList.toggle('valid', hasSpecial);
+            special.classList.toggle('invalid', !hasSpecial);
+            upper.classList.toggle('valid', hasUpper);
+            upper.classList.toggle('invalid', !hasUpper);
+
+            length.textContent = (hasLength ? 'You have 6 characters! ' : 'You do not have 6 characters.');
+            special.textContent = (hasSpecial ? 'You have a special character! ' : 'You do not have a special character.');
+            upper.textContent = (hasUpper ? 'You have an uppercase letter! ' : 'You do not have an uppercase letter.');
+        });
+
+      
+       
+        const form = document.getElementById('form');
+
+        form.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = pword.value;
+            const hasLength = password.length >= 6;
+            const hasSpecial = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+            const hasUpper = /[A-Z]/.test(password);
+
+            if (name == "" || email == "" || password == "") {
+                result.textContent = 'Incomplete form. Please fill out all boxes';
+            }
+            else if (!hasLength || !hasSpecial || !hasUpper) {
+                result.textContent = 'Password does not meet the requirements';
+            }
+            else {
+                result.textContent = 'Success! Thank you!';
+            }
+        });
+
+
+
+
+
+   </script>
+</body>
+</html>
